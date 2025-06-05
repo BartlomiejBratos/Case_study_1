@@ -52,7 +52,7 @@ FROM bezrobocie_roznica
 WHERE zmiana_stopy_bezrobocia <= 0
 ```
 
-![Różnica stopy bezrobocia](Assets\Query1.png)
+![Różnica stopy bezrobocia](Assets/Query1.png)
 
 *Rezultat wygenerowany za pomocą ChatGPT.*
 
@@ -64,7 +64,7 @@ WHERE zmiana_stopy_bezrobocia <= 0
 
 - Jedynymi województwami z przyrostem stopy bezrobocia były Zachodniopomorskie, Kujawsko-Pomorskie, Lubuskie i Dolnośląskie
 
-![Województwa z dodatnim bezrobociem](Assets\Query1_1.png)
+![Województwa z dodatnim bezrobociem](Assets/Query1_1.png)
 
 ### Zapytanie 2 - Wolne miejsca pracy
 
@@ -82,7 +82,7 @@ ORDER BY wartosc DESC
 LIMIT 5
 ```
 
-![Top 5 województw z wolnymi miejscami pracy](Assets\Query2.png)
+![Top 5 województw z wolnymi miejscami pracy](Assets/Query2.png)
 
 ### Zapytanie 3 - Zmiana średniego wynagrodzenia brutto
 
@@ -112,7 +112,7 @@ GROUP BY nazwa
 ORDER BY suma_zmiany_brutto DESC
 ```
 
-![Największy wzrost płacy brutto](Assets\Query3.png)
+![Największy wzrost płacy brutto](Assets/Query3.png)
 
 ### Co się okazało:
 - Różnica między pierwszym a ostatnim województwem wynosi ponad 600zł.
