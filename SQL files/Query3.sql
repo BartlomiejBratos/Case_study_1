@@ -1,4 +1,7 @@
 WITH porownanie AS (
+
+--CTE, które oblicza zmianę wynagrodzenia brutto na przestrzeni ostatnich 5 lat
+
     SELECT
     nazwa,
     rok,
@@ -7,6 +10,7 @@ WITH porownanie AS (
             ORDER BY rok)) AS zmiana
 FROM wynagrodzenie_brutto
 WHERE
+rok BETWEEN 2019 and 2024 AND
 nazwa NOT LIKE 'Powiat%' AND 
 nazwa NOT LIKE 'POLSKA')
 SELECT

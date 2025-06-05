@@ -9,7 +9,7 @@ SELECT
     wartosc,
     wartosc - LAG(wartosc, 1) 
         OVER (PARTITION BY nazwa
-            ORDER BY rok) AS zmiana
+            ORDER BY rok) AS zmiana_stopy_bezrobocia
 
 FROM bezrobocie_rejestrowane
 
@@ -18,11 +18,11 @@ FROM bezrobocie_rejestrowane
 WHERE rok IN(2023, 2024) AND
 nazwa NOT LIKE 'Powiat%' AND 
 nazwa NOT LIKE 'POLSKA'
-ORDER BY zmiana ASC
+ORDER BY zmiana_stopy_bezrobocia ASC
 )
 
 --Zapytanie, które filtruje tylko te województwa, gdzie stopa bezrobocia nie wzrosła w ostatnim roku
 
 SELECT *
 FROM bezrobocie_roznica
-WHERE zmiana <= 0
+WHERE zmiana_stopy_bezrobocia <= 0
